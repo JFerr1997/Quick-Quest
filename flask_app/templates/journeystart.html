@@ -1,0 +1,11 @@
+{% extends './base.html' %}
+{% block base %}
+<h2  class = "text-center " style="color: white;"> The Journey Begins</h2>
+<p class="mx-auto fs-3 text-break p-1" style="color: white; width: 80%; background-color: black;">{{adventurer.name}}'s quest begins after arriving at the town of Strawberri, one would think after living for {{adventurer.age}} winters
+    you would be used to the travel but the weight of their {{adventurer.weapon}} comes in more ways then just pounds.
+    A crowded market fills this farm town,mostly food from the orchards and fields near by.
+</p>
+<div class="text-center">
+<a href="/stealfood/{{adventurer.id}}"class="btn btn-danger" >Steal Food</a>          <a href="/tavern/{{adventurer.id}}" class="btn btn-danger">Find Tavern</a>
+</div>
+{%endblock base%}

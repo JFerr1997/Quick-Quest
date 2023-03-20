@@ -1,0 +1,13 @@
+{% extends './base.html' %}
+{% block base %}
+<h2  class = "text-center " style="color: white;">The Stuffed Pig</h2>
+<p class="mx-auto fs-3 text-break p-1" style="color: white; width: 80%; background-color: black;"> A sign reads "Known for our famous meat pies" upon entering one could tell this place is not a location the good samaritan frequents.
+    As {{adventurer.name}} walks through between cramped and crowded tables , they feel eyes wondering towards them as if nobody's seen a {{adventurer.race}}
+    before. Approaching the bar a crowd of insults follow them apparently this establishment is frequented by a gang of ruffians and they do not take kindly to strangers.
+    Finally one speaks to {{adventurer.name}} "You're new here and there is tax to pay, I like your {{adventurer.weapon}}... I think that'll suffice
+    so pay up or leave" {{adventurer.name}} certainly wasn't parting with their {{adventurer.weapon}} so they had an important decison to make.
+</p>
+<div class="text-center">
+<a href="/tavern/{{adventurer.id}}" class="btn btn-danger" >Leave</a>  <a href="/cellar/{{adventurer.id}}" class="btn btn-danger" >Fight</a>
+</div>
+{%endblock base%}

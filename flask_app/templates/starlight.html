@@ -1,0 +1,13 @@
+{% extends './base.html' %}
+{% block base %}
+<h2 class = "text-center " style="color: white;"> Starlight {{adventurer.race}}</h2>
+<p class="mx-auto fs-3 text-break p-1" style="color: white; width: 80%; background-color: black;">Upon entering a bloodhound greets {{adventurer.name}} licking their hand, accross the room behind a bar stands a {{adventurer.race}}
+    "Welcome , friend it is nice to see a fellow {{adventurer.race}} here" he boasts. "It has been far too long since any of our people have been in here, so tonight i'll treat you as family".
+    That night time passed slow as {{adventurer.name}} learned more about their host Gunther a kind soul with great stories and who never let anyones cup
+    dry. He gave you a place to stay and food to eat free of charge, family he said. Strawberri has been kind to {{adventurer.name}} today, hopefully the next travel 
+    does the same.
+</p>
+<div class="text-center">
+<a href="/home" class="btn btn-danger">Journey's End</a>
+</div>
+{%endblock base%}

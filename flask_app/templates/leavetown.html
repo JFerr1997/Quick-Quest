@@ -1,0 +1,13 @@
+{% extends './base.html' %}
+{% block base %}
+<h2 class = "text-center" style="color: white;">Dark and ...Alone?</h2>
+<p class="mx-auto fs-3 text-break p-1 " style="color: white; width: 80%; background-color: black;">{{adventurer.name}} decided Strawberri was a town worth skipping , being {{adventurer.age}} years old whats one more day?
+    Through the woods with their {adventurer.weapon} ready they hoped to spot some game no matter their inventory, you can't top fresh meat.
+    Time jumps, {{adventurer.name}} sits near a campfire food roasting as they care for their {{adventurer.weapon}},a successful day.
+    That night they slept soundly perhaps too much so, wolves arrvied without a noise and ate their fill.
+    That would be the end of {{adventurer.name}} at {{adventurer.age}} year's of age.
+</p>
+<div class="text-center">
+<a href="/delete/{{adventurer.id}}" class="btn btn-danger" >Journey's End</a>
+</div>
+{%endblock base%}

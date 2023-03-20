@@ -1,0 +1,45 @@
+{% extends './base.html' %}
+{% block base %}
+    <div style="display: flex; justify-content: space-evenly;">
+        <div class="register" style="color: white;">
+            {% with messages = get_flashed_messages(category_filter=['register']) %}  
+                {% if messages %}   
+                    {% for message in messages %}   
+                        <p>{{message}}</p>  
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <h2>Register</h2>
+        <form action="/register" method="POST" style="color: white;">
+            <label>First Name:</label><br>
+            <input type="text" name="first_name"><br>
+            <label>Last Name:</label><br>
+            <input type="text" name="last_name"><br>
+            <label>Email:</label><br>
+            <input type="text"name="email"><br>
+            <label>Password:</label><br>
+            <input type="password" name="password"><br>
+            <label>Confirm Password:</label><br>
+            <input type="password" name="confirm_password"><br>
+            <input type="submit" value="Register" class="btn btn-warning" style="margin: 1%;" >
+        </form>
+        </div>
+        <div class="login" method="POST" style="color: white;">
+            <h2>Login</h2>
+            {% with messages = get_flashed_messages(category_filter=['login']) %}  
+                {% if messages %}   
+                    {% for message in messages %}   
+                        <p>{{message}}</p>  
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        <form action="/login" method="POST" style="color: white;">
+            <label>Email:</label><br>
+            <input type="text" name="email"><br>
+            <label>Password:</label><br>
+            <input type="password" name="password"><br>
+            <input type="submit"  value="Login" class="btn btn-warning" style="margin: 1%;" >
+        </form>
+        </div>
+    </div>
+    {% endblock base %}

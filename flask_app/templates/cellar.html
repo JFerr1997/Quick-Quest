@@ -1,0 +1,13 @@
+{% extends './base.html' %}
+{% block base %}
+<h2 class = "text-center" style="color: white;;">Yummy</h2>
+<p class="mx-auto fs-3 text-break p-1" style="color: white; width: 80%; background-color: black;">Quickly {{adventurer.name}} readys their {{adventurer.weapon}} but a loud whack from behind drops them to the floor unconscious.
+    {{adventurer.name}} wakes up stripped of any armor and weapons. hanging suspended from the rafters. The heat from a nearby furnace is nearly unbearable.
+    Suddenly a familar voice calls out "Well it seems helga must have found out" as the cloaked figure from before enters the room standing with him
+    a woman of imposing stature. She hands the man a coin as he takes his leave. Nobody heard from {{adventurer.name}} after that night, and for that week the meatpies
+    tasted alot like {{adventurer.race}}.
+</p>
+<div class="text-center">
+<a href="/delete/{{adventurer.id}}" class="btn btn-danger">Journey's End</a>
+</div>
+{%endblock base%}

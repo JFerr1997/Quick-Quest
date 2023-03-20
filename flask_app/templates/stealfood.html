@@ -1,0 +1,15 @@
+{% extends './base.html' %}
+{% block base %}
+<h2 class = "text-center " style="color: white;">A Apple a Day</h2>
+<p class="mx-auto fs-3 text-break p-1" style="color: white; width: 80%; background-color: black;">Perhaps their hunger got the best of them or perhaps they're suffering from kleptomania, whatever the reason {{adventurer.name}} decided paying 
+wasn't an option, with a quick but subtle motion they swipe an apple from a nearby stand. It's perfectly ripe, fresh from the morning bounty.
+{{adventurer.name}} takes a quick shortcut between two homes,trying to put ground between themself and the market doing so they bump into a cloaked figure
+"Typical of an {{adventurer.race}} to skip out on paying,Helga is a cruel woman you better hope she didn't see your wandering hands...
+there is a place near by for people of your caliber". The stranger points to a building in the distance "Check out The Stuffed Pig or don't who am I to tell you what to do"
+as quickly as he came the cloaked man was gone.
+Dusk was approaching and their options limited
+</p>
+<div class="text-center" >
+<a href="/leavetown/{{adventurer.id}}"class="btn btn-danger" >Leave Town</a>   <a href="/stuffed/{{adventurer.id}}" class="btn btn-danger" >Vist The Stuffed Pig</a>
+</div>
+{%endblock base%}

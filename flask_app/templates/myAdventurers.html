@@ -1,0 +1,26 @@
+{% extends './base.html' %}
+{% block base %}
+    <h2  class="text-center" style="background-color: black; color: white;">{{user.first_name}}'s Adventurers</h2>
+    <table class="table">
+        <thead>
+            <tr class="table-dark">
+                <th>Name</th>
+                <th>Age</th>
+                <th>Race</th>
+                <th>Weapon</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in adventurers %}
+            <tr class="table-danger">
+                <td>{{a.name}}</td>
+                <td>{{a.age}}</td>
+                <td>{{a.race}}</td>
+                <td>{{a.weapon}}</td>
+                <td><a href="/edit/{{a.id}}">Edit</a>  <a href="/delete/{{a.id}}">Delete</a></td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+{%endblock base%}

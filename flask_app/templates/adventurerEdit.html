@@ -1,0 +1,15 @@
+{% extends './base.html' %}
+{% block base %}
+    <h2 class="text-center" style="background-color: black;color: white;"> {{user.first_name}}</h2>
+    <form action="/edit/{{adventurer.id}}">
+        <label>Name</label>
+        <input type="text" name="name" value ="{{adventurer.name}}">
+        <label>Age</label>
+        <input type="text" name="age" value ="{{adventurer.age}}">
+        <label>Race</label>
+        <input type="text" name="race" value ="{{adventurer.race}}">
+        <label>weapon</label>
+        <input type="text" name="weapon" value ="{{adventurer.weapon}}">
+        <input type="submit" value="Edit Adventurer">
+    </form>
+{%%endblock base}

@@ -1,0 +1,10 @@
+{% extends './base.html' %}
+{% block base %}
+<h2 class = "text-center " style="color: white;">Hospitality</h2>
+<p class="mx-auto fs-3 text-break p-1" style="color: white; width: 80%; background-color: black;">After wandering a bit {{adventurer.name}} found a tavern, the lettering on the sign is in a foregin tounge to this land
+but obviously written by an {{adventurer.race}}. It reads "The Starlight {{adventurer.race}} ", being as dusk was quickly approaching 
+it seemed fitting to enter, perhaps too fitting? </p>
+<div class="text-center">
+<a href="/starlight/{{adventurer.id}}" class="btn btn-danger">Enter The Starlight {{adventurer.race}}</a>    <a href="/leavetown/{{adventurer.id}}" class="btn btn-danger">Leave Town</a>
+</div>
+{%endblock base%}

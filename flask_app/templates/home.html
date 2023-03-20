@@ -1,0 +1,28 @@
+{% extends './base.html' %}
+{% block base %}
+    <table class ="table" >
+        <thead>
+            <tr class="table-dark" >
+                <th>Name</th>
+                <th>Age</th>
+                <th>Race</th>
+                <th>Weapon</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in adventurers %}
+            <tr class="table-success">
+                <td>{{a.name}}</td>
+                <td>{{a.age}}</td>
+                <td>{{a.race}}</td>
+                <td>{{a.weapon}}</td>
+                <td>{% if a.user_id == session['user_id']%}
+                <a href="/journey/{{a.id}}">Journey</a>
+                {% endif %}</td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+    <a href="/create" style="color: white;">Create a New Adventurer</a>
+    {% endblock base %}

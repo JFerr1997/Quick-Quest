@@ -1,0 +1,16 @@
+{% extends './base.html' %}
+{% block base %}
+    <form action="/createadventurer" method="POST" style="margin: 5% 30%; color: white; font-size: xx-large;font-weight: bold;">
+        <div class="row mb-3">
+        <label>Name</label>
+        <input type="text" name="name">
+        <label>Age</label>
+        <input type="number" name="age">
+        <label>Race</label>
+        <input type="text" name="race">
+        <label>Weapon</label>
+        <input type="text" name="weapon">
+        <input type="submit" value="Create Adventurer" style="margin: 5% 0%"class="btn btn-primary fs-4">
+        </div>
+    </form>
+{%endblock base%}

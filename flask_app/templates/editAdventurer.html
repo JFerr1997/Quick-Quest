@@ -1,0 +1,23 @@
+{% extends './base.html' %}
+{% block base %}
+    <form action="/editadventurer/{{adventurer.id}}" method="POST" style="margin: 5% 30%; color: white; font-size: xx-large;font-weight: bold;">
+        {% with messages = get_flashed_messages(category_filter=['edit']) %}  
+                {% if messages %}   
+                    {% for message in messages %}   
+                        <p>{{message}}</p>  
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+        <div class="row mb-3">
+        <label>Name</label>
+        <input type="text" value="{{adventurer.name}}" name="name">
+        <label>Age</label>
+        <input type="number" value="{{adventurer.age}}" name="age">
+        <label>Race</label>
+        <input type="text" value="{{adventurer.race}}" name="race">
+        <label>Weapon</label>
+        <input type="text"  value="{{adventurer.weapon}}" name="weapon">
+        <input type="submit" value="Edit Adventurer" style="margin: 5% 0%"class="btn btn-primary fs-4">
+        </div>
+    </form>
+{%endblock base%}
